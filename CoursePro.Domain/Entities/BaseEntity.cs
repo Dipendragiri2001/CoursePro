@@ -1,15 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CoursePro.Domain.Entities
+﻿namespace CoursePro.Domain.Entities
 {
-    public class BaseEntity : IBaseEntity
+    public class BaseEntity<T> : IBaseEntity<T>
     {
+        public T Id { get; set; }
+        public Guid CreatedById { get; set; }
+        public Guid UpdatedById { get; set; }
+        public DateTime CreatedOn { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedOn { get; set; } = DateTime.UtcNow;
+
     }
-    public interface IBaseEntity
+    public interface IBaseEntity<T>
     {
+        T Id { get; set; }
+        Guid CreatedById { get; set; }
+        Guid UpdatedById { get; set; }
+        DateTime CreatedOn { get; set; }
+        DateTime UpdatedOn { get; set; }
     }
 }

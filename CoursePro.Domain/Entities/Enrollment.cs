@@ -1,8 +1,7 @@
 ﻿namespace CoursePro.Domain.Entities
 {
-    public class Enrollment
+    public class Enrollment : BaseEntity<long>
     {
-        public Guid Id { get; set; }
         public Guid CourseId { get; set; }
         public Guid UserId { get; set; }
         public DateTime EnrolledAt { get; set; } = DateTime.UtcNow;
