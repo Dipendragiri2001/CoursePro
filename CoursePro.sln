@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoursePro.Shared", "CourseP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoursePro.API", "CoursePro.API\CoursePro.API.csproj", "{4C6E0EA5-DBA7-4D91-962E-A5D3796FE86E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{E136143E-ADDB-48D7-AEDD-1573C7D03EFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthService", "AuthService\AuthService.csproj", "{520A592D-12D2-4EDD-AD76-7933EFFD8424}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,10 @@ Global
 		{4C6E0EA5-DBA7-4D91-962E-A5D3796FE86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C6E0EA5-DBA7-4D91-962E-A5D3796FE86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C6E0EA5-DBA7-4D91-962E-A5D3796FE86E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{520A592D-12D2-4EDD-AD76-7933EFFD8424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{520A592D-12D2-4EDD-AD76-7933EFFD8424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{520A592D-12D2-4EDD-AD76-7933EFFD8424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{520A592D-12D2-4EDD-AD76-7933EFFD8424}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +64,7 @@ Global
 		{0E2077A3-87C1-4DA0-9493-3FF620E9814E} = {CEA0DC58-1846-483A-82A6-8EE275E970E2}
 		{A2FC989E-5A95-4A28-9390-36776E304A71} = {CEA0DC58-1846-483A-82A6-8EE275E970E2}
 		{4C6E0EA5-DBA7-4D91-962E-A5D3796FE86E} = {CEA0DC58-1846-483A-82A6-8EE275E970E2}
+		{520A592D-12D2-4EDD-AD76-7933EFFD8424} = {E136143E-ADDB-48D7-AEDD-1573C7D03EFC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A68B7525-55A3-4D9E-9D31-FFE138F7D6AB}

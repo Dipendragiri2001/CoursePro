@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>8f8f9714-9ffa-456d-b348-b5cf8f412ab7</UserSecretsId>
+    <UserSecretsId>fbc0a93c-0e82-4c6f-88ff-b5476f5fdfc2</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AuthService\AuthService.csproj" />
     <ProjectReference Include="..\CoursePro.Application\CoursePro.Application.csproj" />
     <ProjectReference Include="..\CoursePro.Infrastructure\CoursePro.Infrastructure.csproj" />
   </ItemGroup>
