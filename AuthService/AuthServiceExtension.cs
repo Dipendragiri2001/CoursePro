@@ -60,6 +60,8 @@ namespace AuthService
             });
 
             services.AddScoped<IUserService, UserService>();
+
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
         }
 
         public static async Task SeedDbAsync(this WebApplication app, Action<List<UserRegisterModel>> registerUser)
