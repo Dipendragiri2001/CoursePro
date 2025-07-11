@@ -7,7 +7,7 @@ namespace CoursePro.Application
     {
         public static void AddApplicationServices(this IServiceCollection services)
         {
-            services.AddAutoMapper(typeof(MappingProfile));
+            services.AddAutoMapper(typeof(AutoMapperProfile));
         }
     }
 }

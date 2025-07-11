@@ -1,8 +1,8 @@
 ﻿using AuthService.Data;
 using AuthService.Entities;
+using AuthService.Interfaces;
 using AuthService.Models;
 using AuthService.Services;
-using AuthService.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;

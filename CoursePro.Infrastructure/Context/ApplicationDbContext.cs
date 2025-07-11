@@ -1,7 +1,7 @@
 ﻿using CoursePro.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace CoursePro.Infrastructure.Context
+namespace CoursePro.Infrastructure
 {
     internal class ApplicationDbContext : DbContext
     {
