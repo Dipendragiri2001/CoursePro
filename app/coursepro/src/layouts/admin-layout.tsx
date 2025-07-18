@@ -1,6 +1,6 @@
 import { Outlet, useLocation, useNavigate } from "react-router";
 import { Layout, Menu, theme } from 'antd';
-import React from "react";
+import React, { useState } from "react";
 import './styles/admin-layout.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen, faGauge, faUserAlt } from "@fortawesome/free-solid-svg-icons";
@@ -41,6 +41,7 @@ function AdminLayout() {
         navigate(data.key == 'dashboard'? '': data.key)
     
       }
+      let [isMenuCollapsed, setMenuCollapsed] = useState(false);
       
     return (  
     <>
@@ -51,10 +52,13 @@ function AdminLayout() {
       <Sider
         breakpoint="lg"
         collapsible 
+        collapsed = {isMenuCollapsed}
         onBreakpoint={(broken) => {
           console.log(broken);
         }}
         onCollapse={(collapsed, type) => {
+            if(type="clickTrigger")
+                setMenuCollapsed(!isMenuCollapsed)
           console.log(collapsed, type);
         }}
         className="side-nav"
