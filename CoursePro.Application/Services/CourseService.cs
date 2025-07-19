@@ -4,7 +4,7 @@ using CoursePro.Application.Services.Contracts;
 using CoursePro.Domain.Contracts;
 using CoursePro.Domain.Entities;
 
-namespace CoursePro.Infrastructure.Services.Courses
+namespace CoursePro.Application.Services
 {
     public class CourseService : ICourseService
     {
