@@ -1,0 +1,24 @@
+.layout{
+
+    overflow: 'hidden';
+    width: calc(100% - 0px);
+    max-width: calc(100% - 0px);
+    height: '100vh';
+    .side-nav{
+        height: 100vh;
+    }
+
+    .content-section{
+        padding: 24;
+        min-height: calc(100vh - 100px);
+        background: #fff;
+
+        margin: 24px 16px 0,;
+        padding: 24px;
+    }
+
+    .ant-menu-item {
+        border-radius: 0;
+    }
+}
+
