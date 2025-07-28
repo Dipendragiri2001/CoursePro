@@ -4,6 +4,7 @@ using AuthService.Interfaces;
 using AuthService.Models;
 using AuthService.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.OAuth;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -32,6 +33,8 @@ namespace AuthService
 
             });
 
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+
             services.AddIdentity<ApplicationUser, IdentityRole<Guid>>()
                 .AddEntityFrameworkStores<AuthDbContext>()
                 .AddDefaultTokenProviders();
@@ -56,6 +59,17 @@ namespace AuthService
                     ValidIssuer = jwtSettings?.Issuer,
                     ValidAudience = jwtSettings?.Audience,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings?.SecretKey ?? String.Empty))
+                };
+
+                options.Events = new JwtBearerEvents
+                {
+                    OnMessageReceived = context =>
+                    {
+                        context.Request.Cookies.TryGetValue(AuthConstants.AccessToken, out var accessToken);
+                        if (!string.IsNullOrEmpty(accessToken))
+                            context.Token = accessToken;
+                        return Task.CompletedTask;
+                    }
                 };
             });
 
