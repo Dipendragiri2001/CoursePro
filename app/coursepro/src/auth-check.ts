@@ -28,7 +28,6 @@ export default function checkUserPermission(request:Request){
 function checkAdminPermission(request:Request){
     
     isAuthenticated(request)
-    debugger
     const authResult = localStorage.getItem('authResult');
     const url = new URL(request.url);
     if(authResult){

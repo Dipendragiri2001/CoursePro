@@ -1,24 +1,29 @@
-.layout{
+.layout {
+  overflow: hidden;
+  width: calc(100% - 0px);
+  max-width: calc(100% - 0px);
+  height: 100vh;
 
-    overflow: 'hidden';
-    width: calc(100% - 0px);
-    max-width: calc(100% - 0px);
-    height: '100vh';
-    .side-nav{
-        height: 100vh;
-    }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .content-section{
-        padding: 24;
-        min-height: calc(100vh - 100px);
-        background: #fff;
+  .side-nav {
+    height: 100vh;
+  }
 
-        margin: 24px 16px 0,;
-        padding: 24px;
-    }
+  .content-section {
+    padding: 24;
+    min-height: calc(100vh - 100px);
+    background: #fff;
 
-    .ant-menu-item {
-        border-radius: 0;
-    }
+    margin: 24px 16px 0;
+    padding: 24px;
+  }
+
+  .ant-menu-item {
+    border-radius: 0;
+  }
 }
-
