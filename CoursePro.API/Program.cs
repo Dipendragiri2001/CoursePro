@@ -23,7 +23,7 @@ builder.Services.AddCors(options =>
     {
         opt.AllowAnyMethod();
         opt.AllowAnyHeader();
-        opt.WithOrigins("http://localhost:5174");
+        opt.WithOrigins("http://localhost:5173");
         opt.AllowCredentials();
 
     });
