@@ -79,5 +79,12 @@ namespace AuthService.Services
             return result.Succeeded;
         }
 
+        public async Task<bool> CreateAsync(ApplicationUser user, string password)
+        {
+            user.UserName = user.Email;
+            var result = await _userManager.CreateAsync(user,password);
+
+            return result.Succeeded;
+        }
     }
 }
